@@ -1,0 +1,15 @@
+{
+    "groups": [
+        {
+            "name": "api",
+            "description":"this group contains api related templates",
+            "templates": [
+                {
+                    "name": "serverless aws api",
+                    "description": "this template creates aws cdk powered serverless api",
+                    "url": "github.com/gophersumit/aws-serverless-template"
+                }
+            ]
+        }
+    ]
+}
