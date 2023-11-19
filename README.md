@@ -9,6 +9,4 @@ Go Scaffold is a CLI tool to generate new Go projects from templates.
 - Supports templates hosted on GitHub
 
 ## Usage
-## Usage
-
-![Usage Demo](go-scaffold.gif)
+![Usage Demo](https://github.com/gophersumit/goscaffold/blob/main/goscaffold.gif)
