@@ -25,8 +25,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gophersumit/goscaffold/pkg/templates"
-	"github.com/olekukonko/tablewriter"
+	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 )
 
@@ -36,22 +35,10 @@ var templatesCmd = &cobra.Command{
 	Short: "list available templates",
 	Long:  `templates command lists all the available templates.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		templateFile, err := templates.GetGroups()
-		if err != nil {
-			fmt.Println(err)
-			return
+		if _, err := tea.NewProgram(newModel()).Run(); err != nil {
+			fmt.Println("Error running program:", err)
+			os.Exit(1)
 		}
-		table := tablewriter.NewWriter(os.Stdout)
-		table.SetHeader([]string{"Group Name", "Group Description", "Template Name", "Template Description"})
-
-		for _, group := range templateFile.Groups {
-			for _, template := range group.Templates {
-				row := []string{group.Name, group.Description, template.Name, template.Description}
-				table.Append(row)
-			}
-		}
-
-		table.Render()
 
 	},
 }

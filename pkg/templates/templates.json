@@ -5,8 +5,18 @@
             "description":"this group contains api related templates",
             "templates": [
                 {
-                    "name": "serverless aws api",
-                    "description": "this template creates aws cdk powered serverless api",
+                    "name": "serverless aws api with dynamo",
+                    "description": "api gateway + aws go lambda + dynamodb",
+                    "url": "github.com/gophersumit/aws-serverless-template"
+                },
+                {
+                    "name": "serverless aws api s3",
+                    "description": "api gateway + aws go lambda + s3",
+                    "url": "github.com/gophersumit/aws-serverless-template"
+                },
+                {
+                    "name": "serverless aws api sqs",
+                    "description": "api gateway + aws go lambda + sqs",
                     "url": "github.com/gophersumit/aws-serverless-template"
                 }
             ]
